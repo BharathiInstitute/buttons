@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui'; // For ImageFilter
-// hello ///heer
+
 class GetStartedButton extends StatefulWidget {
   const GetStartedButton({super.key});
 
@@ -41,6 +41,19 @@ class _GetStartedButtonState extends State<GetStartedButton> {
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
                 child: Container(),
+              ),
+            ),
+          ),
+          // Assets image
+          Positioned(
+            left: 16,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                'assets/img4.webp',
+                width: 40,
+                height: 40,
+                fit: BoxFit.cover,
               ),
             ),
           ),
